@@ -33,7 +33,7 @@ export function ImageWithLoader({
         </div>
       )}
       <Image
-        key={src}
+        key={typeof src === "string" ? src : src.src}
         src={src}
         {...imageProps}
         onLoadingComplete={(result) => {
