@@ -27,24 +27,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Preload critical images */}
+        {/* Preload critical images via Next.js Image API */}
         {PUBLIC_IMAGES.slice(0, 2).map((imageSrc) => (
           <link
-            key={imageSrc}
+            key={`preload-${imageSrc}`}
             rel="preload"
             as="image"
-            href={imageSrc}
-            type="image/jpeg"
-          />
-        ))}
-        {/* Prefetch remaining images */}
-        {PUBLIC_IMAGES.slice(2).map((imageSrc) => (
-          <link
-            key={imageSrc}
-            rel="prefetch"
-            as="image"
-            href={imageSrc}
-            type="image/jpeg"
+            href={`/_next/image?url=${encodeURIComponent(
+              imageSrc
+            )}&w=1200&q=80`}
+            type="image/webp"
           />
         ))}
       </head>
