@@ -2,7 +2,7 @@
 
 import React from "react";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
+import { ImageWithLoader } from "@/app/components/ImageWithLoader";
 
 export default function Hoy() {
   const router = useRouter();
@@ -59,7 +59,7 @@ export default function Hoy() {
         <div className="w-full mb-4 rounded-xl bg-pink-100 flex items-center justify-center overflow-hidden min-h-44 md:min-h-50">
           {screen.imgSrc ? (
             <div className="relative w-full h-90 md:h-130">
-              <Image
+              <ImageWithLoader
                 src={screen.imgSrc}
                 alt={screen.title}
                 fill

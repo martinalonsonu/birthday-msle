@@ -2,7 +2,7 @@
 
 import React from "react";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
+import { ImageWithLoader } from "@/app/components/ImageWithLoader";
 
 export default function LoQueSiento() {
   const router = useRouter();
@@ -70,7 +70,7 @@ export default function LoQueSiento() {
         <div className="w-full mb-4 rounded-xl bg-pink-100 flex items-center justify-center overflow-hidden min-h-[176px] md:min-h-[200px]">
           {screen.imgSrc ? (
             <div className="relative w-full h-[360px] md:h-[520px]">
-              <Image
+              <ImageWithLoader
                 src={screen.imgSrc}
                 alt={screen.title}
                 fill
