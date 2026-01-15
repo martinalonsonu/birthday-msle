@@ -22,7 +22,7 @@ export default function LoQueMePasa() {
         "ese momento",
         "ya valió el viaje.",
       ],
-      imgSrc: "/05.png",
+      imgSrc: "/05.jpg",
       imgAlt: "ella bajando del bus",
     },
     {
@@ -34,7 +34,7 @@ export default function LoQueMePasa() {
         "aunque sea un rato,",
         "aunque sea en lo cotidiano.",
       ],
-      imgSrc: "/06.png",
+      imgSrc: "/06.jpg",
       imgAlt: "taxi y parches",
     },
     {
@@ -47,7 +47,7 @@ export default function LoQueMePasa() {
         "que antes",
         "habrían pasado desapercibidos.",
       ],
-      imgSrc: "/07.png",
+      imgSrc: "/07.jpg",
       imgAlt: "primera foto juntos",
     },
     {
@@ -62,7 +62,7 @@ export default function LoQueMePasa() {
         "como si ya fuera normal",
         "estar en mi vida.",
       ],
-      imgSrc: "/08.png",
+      imgSrc: "/08.jpg",
       imgAlt: "su pie con taco",
     },
   ];
@@ -81,6 +81,8 @@ export default function LoQueMePasa() {
                 fill
                 className="object-contain"
                 sizes="(max-width:768px) 90vw, 448px"
+                loading="lazy"
+                quality={80}
               />
             </div>
           ) : (

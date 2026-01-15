@@ -19,7 +19,7 @@ export default function LoQueSiento() {
         "que aparece",
         "cuando pienso en ti.",
       ],
-      imgSrc: "/01.png",
+      imgSrc: "/01.jpg",
       imgAlt: "foto juntos",
     },
     {
@@ -32,7 +32,7 @@ export default function LoQueSiento() {
         "cuando todo está normal",
         "y aún así me sacas una sonrisa.",
       ],
-      imgSrc: "/02.png",
+      imgSrc: "/02.jpg",
       imgAlt: "foto juntos",
     },
     {
@@ -44,7 +44,7 @@ export default function LoQueSiento() {
         "todo es un poco borroso,",
         "pero igual se siente real.",
       ],
-      imgSrc: "/03.png",
+      imgSrc: "/03.jpg",
       imgAlt: "foto borrosa",
     },
     {
@@ -57,7 +57,7 @@ export default function LoQueSiento() {
         "",
         "Este fue uno de esos.",
       ],
-      imgSrc: "/04.png",
+      imgSrc: "/04.jpg",
       imgAlt: "primer beso",
     },
   ];
@@ -76,6 +76,8 @@ export default function LoQueSiento() {
                 fill
                 className="object-contain"
                 sizes="(max-width:768px) 90vw, 448px"
+                loading="lazy"
+                quality={80}
               />
             </div>
           ) : (

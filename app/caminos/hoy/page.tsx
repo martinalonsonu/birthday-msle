@@ -65,6 +65,8 @@ export default function Hoy() {
                 fill
                 className="object-contain"
                 sizes="(max-width:768px) 90vw, 448px"
+                loading="lazy"
+                quality={80}
               />
             </div>
           ) : (

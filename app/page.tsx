@@ -57,7 +57,7 @@ export default function Home() {
           </button>
         </form>
         <p className="mt-5 text-pink-400 text-sm text-center">
-          Pista: Es posiblemente la palabra que más utilizo en nuestro chat (380
+          Pista: Es posiblemente la palabra que más utilizo en nuestro chat (386
           veces y contando)
         </p>
       </div>
