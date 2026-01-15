@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import Image, { ImageProps } from "next/image";
 
 interface ImageWithLoaderProps extends ImageProps {
@@ -13,6 +13,18 @@ export function ImageWithLoader({
   ...props
 }: ImageWithLoaderProps) {
   const [isLoading, setIsLoading] = useState(true);
+
+  // Usar useMemo para detectar cambios en src
+  const srcString = useMemo(() => {
+    return typeof src === "string" ? src : JSON.stringify(src);
+  }, [src]);
+
+  // Resetear isLoading cuando cambia srcString
+  const [prevSrc, setPrevSrc] = useState(srcString);
+  if (prevSrc !== srcString) {
+    setIsLoading(true);
+    setPrevSrc(srcString);
+  }
 
   const loaderBgColor = loaderColor === "pink" ? "bg-pink-100" : "bg-gray-100";
   const loaderSpinnerColor =
@@ -33,7 +45,6 @@ export function ImageWithLoader({
         </div>
       )}
       <Image
-        key={typeof src === "string" ? src : src.src}
         src={src}
         {...imageProps}
         onLoadingComplete={(result) => {
