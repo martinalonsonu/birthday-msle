@@ -65,7 +65,25 @@ export default function LoQueSiento() {
   const screen = screens[idx];
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-pink-50 via-rose-50 to-pink-100 font-sans p-6">
+    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-pink-50 via-rose-50 to-pink-100 font-sans p-6 relative overflow-hidden">
+      {/* Emojis animados de fondo */}
+      <span className="absolute top-10 left-10 text-6xl opacity-20 animate-pulse">💖</span>
+      <span className="absolute top-20 right-20 text-5xl opacity-15 animate-bounce">✨</span>
+      <span className="absolute bottom-20 left-20 text-5xl opacity-20 animate-pulse">💕</span>
+      <span className="absolute bottom-10 right-10 text-6xl opacity-15 animate-bounce">🌸</span>
+      <span className="absolute top-1/2 left-8 text-4xl opacity-10 animate-pulse">🎀</span>
+      <span className="absolute top-1/3 right-8 text-5xl opacity-20 animate-bounce">💝</span>
+      <span className="absolute bottom-1/3 right-20 text-4xl opacity-15 animate-pulse">🌹</span>
+      <span className="absolute bottom-1/4 left-1/4 text-5xl opacity-10 animate-bounce">🦋</span>
+      <span className="absolute top-1/4 left-1/3 text-5xl opacity-20 animate-pulse">🎉</span>
+      <span className="absolute top-2/3 right-1/4 text-4xl opacity-15 animate-bounce">💐</span>
+      <span className="absolute bottom-1/3 left-1/2 text-5xl opacity-10 animate-pulse">🌺</span>
+      <span className="absolute top-1/3 left-2/3 text-4xl opacity-20 animate-bounce">👑</span>
+      <span className="absolute bottom-2/3 left-3/4 text-6xl opacity-15 animate-pulse">💕</span>
+      <span className="absolute top-3/4 right-1/3 text-5xl opacity-10 animate-bounce">🌷</span>
+      <span className="absolute bottom-1/4 right-1/3 text-4xl opacity-20 animate-pulse">✨</span>
+      <span className="absolute top-1/2 right-1/4 text-5xl opacity-15 animate-bounce">💫</span>
+      
       <div className="bg-white/85 backdrop-blur-sm w-full max-w-md p-6 rounded-3xl shadow-2xl text-black border border-pink-100 relative overflow-hidden">
         <div className="w-full mb-4 rounded-xl bg-pink-100 flex items-center justify-center overflow-hidden min-h-[176px] md:min-h-[200px]">
           {screen.imgSrc ? (
