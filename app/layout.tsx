@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Hola :)",
-  description: "Hecho en 3 noches de insomnio",
+  description: "Hecho en 3 noches de insomnio (bueno, ahora 4) :) <3",
 };
 
 export default function RootLayout({
