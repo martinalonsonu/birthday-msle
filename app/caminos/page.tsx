@@ -104,6 +104,17 @@ export default function Home() {
           >
             ✨ Hoy
           </button>
+
+          <button
+            onClick={() => router.push("/caminos/un-rato-nuestro")}
+            className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-2xl hover:scale-[1.02] transform transition duration-200 shadow-lg relative"
+            aria-label="Un rato nuestro"
+          >
+            💜 Un rato nuestro
+            <span className="absolute -top-3 -right-2 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full animate-pulse">
+              Nuevo
+            </span>
+          </button>
         </div>
 
         <p className="mt-6 text-pink-400 text-sm text-center">
